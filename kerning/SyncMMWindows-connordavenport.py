@@ -4,6 +4,8 @@
     Script by Connor Davenport. Shared with permission. Original here:
 
     https://gist.github.com/connordavenport/17717ed4187a31b572eafa0e77e9cb09
+
+	NOTE: there may be a newer version or possibly even an extension from Connor, by the time you read this. Check for it!
 """
 
 import metricsMachine
