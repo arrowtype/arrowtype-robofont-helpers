@@ -1,5 +1,10 @@
 """
-From https://github.com/roboDocs/ScaleFast/issues/5, made to run through all open fonts.
+    Goes through all open fonts and changes offcurve start points to oncurve start points,
+    which is necessary for predictable interpolation/compatibility.
+
+    From https://github.com/roboDocs/ScaleFast/issues/5, made to run through all open fonts.
+
+    Script by Frank Grießhammer. Used/shared with permission.
 """
 
 from fontTools.ufoLib.pointPen import PointToSegmentPen

@@ -1,6 +1,8 @@
 """
-    Script by Connor Davenport.
-    
+	Syncs multiple MetricsMachine windows, which is especially useful for kerning multi-source fonts.
+
+    Script by Connor Davenport. Shared with permission. Original here:
+
     https://gist.github.com/connordavenport/17717ed4187a31b572eafa0e77e9cb09
 """
 
