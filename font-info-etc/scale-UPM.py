@@ -9,7 +9,7 @@ font = CurrentFont()
 
 print(font)
 
-newUpm = 2048
+newUpm = 1200
 oldUpm = font.info.unitsPerEm
 factor = newUpm / oldUpm
 

@@ -17,11 +17,11 @@ g = CurrentGlyph()
 UPM = f.info.unitsPerEm
 
 # Set grid size or number of divisions in UPM
-# gridSize = 25                         ### uncomment this to use units for grid size (and comment-out the two lines below)
+gridSize = 50                         ### uncomment this to use units for grid size (and comment-out the two lines below)
 # uncomment this to use divisions of UPM for grid size (and comment-out the line above)
-divisions = 20
+# divisions = 20
 # uncomment this to use divisions of UPM for grid size
-gridSize = int(round(UPM / divisions))
+# gridSize = int(round(UPM / divisions))
 
 
 if f.info.italicAngle:
@@ -46,11 +46,15 @@ if len(g.guidelines) > 10:
 
 else:
     print("🤖 Applying a grid of guidelines with a size of " + str(gridSize))
-    print("🤖 You have a leftover of " + str(UPM % divisions) + " units.")
+    #print("🤖 You have a leftover of " + str(UPM % divisions) + " units.")
     clearGuides()
     setDefault("glyphViewLockGuides", True)
 
-    italicOffset = f.lib["com.typemytype.robofont.italicSlantOffset"]
+    try:
+        italicOffset = f.lib["com.typemytype.robofont.italicSlantOffset"]
+    except KeyError:
+        italicOffset = 0
+        
     # add vertical guides
     for x in range(0, g.width+gridSize, gridSize):
 
